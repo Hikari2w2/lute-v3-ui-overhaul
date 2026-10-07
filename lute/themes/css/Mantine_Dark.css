@@ -394,7 +394,7 @@ input:focus, select:focus, textarea:focus {
     background-color: transparent !important;
     border: none !important;
     border-radius: 0 !important;
-    filter: brightness(0) invert(1) opacity(0.5) !important;
+    filter: brightness(0) invert(1) opacity(0.85) !important;
     width: 20px !important;
     height: 20px !important;
     display: block !important;
@@ -510,7 +510,7 @@ input:focus, select:focus, textarea:focus {
     background-color: transparent !important;
     border: 1px solid #a5a5a5 !important;
     border-radius: 6px !important;
-    filter: brightness(0) invert(1) opacity(0.5) !important;
+    filter: brightness(0) invert(1) opacity(0.85) !important;
 }
 .text-options-button:hover {
     filter: brightness(0) invert(1) opacity(1) !important;
@@ -522,7 +522,7 @@ input:focus, select:focus, textarea:focus {
 }
 .audio-player-container {
     padding: 0 20px !important;
-    position: relative !important;
+    position: relative;
     overflow: visible !important;
     border-top: none !important;
     box-shadow: 0 -2px 10px rgba(0,0,0,0.2) !important;
@@ -591,4 +591,55 @@ input:focus, select:focus, textarea:focus {
 }
 .audio-player-controls-container {
     margin-left: 100px !important; /* Make room for duration text */
+}
+
+.sticky-player .audio-player-container { position: fixed !important; bottom: 0 !important; z-index: 9999 !important; }
+
+/* Guarantee uniform player background and layout */
+.audio-player-container {
+    background-color: var(--surface) !important;
+    margin: 0 !important;
+    width: 100% !important;
+    padding: 10px 20px !important;
+}
+.audio-player-central-container, .audio-player-right-container, .audio-player-top-container {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Fix Duration spreading across the screen */
+.duration-container {
+    justify-content: flex-start !important;
+    right: auto !important;
+    width: max-content !important;
+}
+.rewind-container select {
+    background-color: transparent !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border) !important;
+}
+
+/* Fix Bookmark Button SVG invert if needed */
+.bookmark-buttons-container .audio-button {
+    filter: brightness(0) invert(1) opacity(0.8) !important;
+}
+.bookmark-buttons-container .audio-button:hover {
+    filter: brightness(0) invert(1) opacity(1) !important;
+}
+
+/* Left Menu fixes */
+#reading_menu {
+    border-right: 1px solid var(--border) !important;
+}
+.audio-player-timeline-container {
+    left: -20px !important;
+    width: calc(100% + 40px) !important;
+}
+.bookmark-markers-container {
+    left: 0 !important;
+    width: 100% !important;
+}
+.duration-container {
+    left: 90px !important;
 }
