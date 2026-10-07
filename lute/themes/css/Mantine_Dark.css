@@ -126,7 +126,7 @@ table.dataTable tbody td { padding: 15px !important; color: var(--text-main) !im
 table.dataTable tbody td a { color: var(--primary) !important; font-weight: 500 !important; }
 
 /* Read Screen */
-#thetext {
+div#read_pane_left div#thetext {
     background-color: var(--bg-color) !important;
     color: var(--text-bright) !important;
     line-height: 1.8 !important;
@@ -165,7 +165,7 @@ span.status5 { background-color: rgba(64, 192, 87, 0.2) !important; color: #fff 
     border-top: 1px solid var(--border) !important;
 }
 
-#thetext {
+div#read_pane_left div#thetext {
     background-color: var(--bg-color) !important;
     color: var(--text-bright) !important;
     line-height: 1.8 !important;
@@ -821,7 +821,7 @@ select {
     max-width: none !important; /* Make it more alargado */
     margin: 0 auto 20px auto !important;
     border-radius: 12px !important;
-    padding: 45px 20px 15px 20px !important; /* Make it mas fino (less tall) */
+    padding: 65px 20px 15px 20px !important; /* Make it mas fino (less tall) */
     box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
 }
 #read_pane_container:not(.sticky-player) .audio-player-top-container {
@@ -843,12 +843,17 @@ select {
 
 #read_pane_container:not(.sticky-player) .duration-container {
     position: absolute !important;
-    top: auto !important;
-    bottom: 25px !important; /* Aligned with buttons */
+    top: 20px !important; /* 20px relative to timeline container = 40px relative to widget */
     left: 50% !important;
-    transform: translateX(-50%) !important;
-    margin-top: 0 !important;
+    transform: translateX(-30%) !important;
+    text-align: center !important;
+    width: auto !important;
+    padding-right: 0 !important;
+    margin-bottom: 0 !important;
+    display: block !important;
 }
+
+
 #read_pane_container:not(.sticky-player) #play-btn {
     margin-left: 0 !important;
 }
@@ -858,7 +863,7 @@ select {
     transform: none !important;
 }
 
-.reading_header_container {
+div#read_pane_left .reading_header_container {
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
@@ -866,17 +871,31 @@ select {
 }
 
 #read_pane_container:not(.sticky-player) .audio-player-timeline-container {
-    position: static !important;
-}
-#read_pane_container:not(.sticky-player) .timeline {
     position: absolute !important;
     top: 20px !important;
     left: 20px !important;
     width: calc(100% - 40px) !important;
+    height: 10px !important;
+}
+#read_pane_container:not(.sticky-player) .timeline {
+    width: 100% !important;
 }
 #read_pane_container:not(.sticky-player) .bookmark-markers-container {
     position: absolute !important;
-    top: 20px !important;
-    left: 25px !important; /* offset for thumb width */
-    width: calc(100% - 50px) !important;
+    top: 0 !important;
+    left: 5px !important; /* offset for thumb width */
+    width: calc(100% - 10px) !important;
+}
+
+/* Nuke any hidden containers and paddings */
+#read_pane_left {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+}
+.container {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
