@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global Variables */
+:root {
+    --bg-color: #1a1b1e;
+    --surface: #25262b;
+    --border: #373A40;
+    --text-main: #C1C2C5;
+    --text-bright: #FFFFFF;
+    --primary: #339af0;
+    --primary-hover: #1c7ed6;
+}
+
+/* Base Body */
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-main) !important;
+    font-family: 'Poppins', sans-serif !important;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-bright) !important;
+    font-weight: 600 !important;
+}
+
+a {
+    color: var(--primary) !important;
+    text-decoration: none !important;
+}
+
+/* Top Navigation Bar */
+.menu-bar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background-color: var(--surface) !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 10px 30px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2) !important;
+    height: 60px !important;
+}
+
+.header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 15px !important;
+}
+
+.lutelogo {
+    height: 40px !important;
+    width: auto !important;
+    filter: brightness(0) invert(1) !important; /* Make original lute logo white */
+}
+
+h1#luteTitle {
+    margin: 0 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.menu {
+    display: flex !important;
+    gap: 20px !important;
+    align-items: center !important;
+}
+
+.menu-item {
+    position: relative !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    text-transform: uppercase !important;
+    color: var(--text-main) !important;
+    padding: 10px 0 !important;
+}
+
+.menu-item:hover, .menu-item span:hover {
+    color: var(--primary) !important;
+}
+
+/* Dropdown Sub-menu */
+ul.sub-menu {
+    display: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    padding: 10px 0 !important;
+    min-width: 200px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+    z-index: 1000 !important;
+    list-style: none !important;
+}
+
+.menu-item:hover ul.sub-menu {
+    display: block !important;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+ul.sub-menu li a {
+    display: block !important;
+    padding: 10px 20px !important;
+    color: var(--text-main) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+}
+
+ul.sub-menu li a:hover {
+    background-color: rgba(255,255,255,0.05) !important;
+    color: var(--primary) !important;
+}
+
+/* DataTables Styling Overhaul */
+.dataTables_wrapper {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+    margin-top: 20px !important;
+}
+
+table.dataTable {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    border: none !important;
+}
+
+table.dataTable thead th {
+    background-color: rgba(255,255,255,0.02) !important;
+    color: var(--text-bright) !important;
+    border-bottom: 2px solid var(--border) !important;
+    padding: 15px !important;
+    font-weight: 600 !important;
+}
+
+table.dataTable tbody tr {
+    background-color: transparent !important;
+    border-bottom: 1px solid var(--border) !important;
+    transition: background-color 0.2s !important;
+}
+
+table.dataTable tbody tr:hover {
+    background-color: rgba(255,255,255,0.02) !important;
+}
+
+table.dataTable tbody td {
+    padding: 15px !important;
+    color: var(--text-main) !important;
+    border: none !important;
+}
+
+/* DataTable controls (search, pagination) */
+.dataTables_filter input {
+    background-color: var(--bg-color) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-bright) !important;
+    border-radius: 6px !important;
+    padding: 8px 12px !important;
+    margin-left: 10px !important;
+}
+
+.dataTables_filter input:focus {
+    border-color: var(--primary) !important;
+    outline: none !important;
+}
+
+.dataTables_paginate .paginate_button {
+    background-color: var(--bg-color) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 4px !important;
+    padding: 5px 10px !important;
+    margin: 0 3px !important;
+}
+.dataTables_paginate .paginate_button.current {
+    background-color: var(--primary) !important;
+    color: white !important;
+    border-color: var(--primary) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container Spacing */
+.container {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+}
+
+/* FIXES FOR ORIGINAL LUTE OVERRIDES */
+
+/* Fix the black text in the top menu caused by original styles.css color: black !important */
+.menu-item > span, .menu-item > a.home-link {
+    color: var(--text-main) !important;
+}
+.menu-item > span:hover, .menu-item > a.home-link:hover {
+    color: var(--primary) !important;
+}
+
+/* Fix DataTable info text (bottom left "1 to X of Y") and Length Menu ("Show X entries") */
+.dataTables_info, .dataTables_length, .dataTables_filter {
+    color: var(--text-main) !important;
+    font-size: 14px !important;
+}
+
+.dataTables_length select {
+    background-color: var(--bg-color) !important;
+    color: var(--text-bright) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 4px !important;
+    padding: 4px !important;
+}
+
+/* Fix Pagination Arrows and Text */
+.dataTables_paginate {
+    color: var(--text-main) !important;
+}
+.dataTables_paginate .paginate_button.disabled {
+    color: #5c5f66 !important;
+    cursor: not-allowed !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+/* Make book titles brighter */
+table.dataTable tbody td a {
+    color: var(--primary) !important;
+    font-weight: 500 !important;
+}
+
+/* Make tags and other texts look better */
+table.dataTable tbody td {
+    vertical-align: middle !important;
+}
