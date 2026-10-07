@@ -65,7 +65,7 @@ a {
     width: 24px !important;
     height: 24px !important;
     filter: none !important;
-    opacity: 0.7 !important;
+    
 }
 .refresh:hover {
     opacity: 1 !important;
@@ -260,7 +260,7 @@ input:focus, select:focus, textarea:focus {
 }
 .text-options-button {
     filter: brightness(0) invert(1) !important;
-    opacity: 0.7 !important;
+    
 }
 
 /* Fix Status Buttons in Term Form */
@@ -506,14 +506,16 @@ input:focus, select:focus, textarea:focus {
 /* Left Menu Text Options (Spotify Icon Style) */
 .text-options-button {
     background-color: transparent !important;
-    border: none !important;
-    border-radius: 50% !important; /* Circular hover */
-    filter: brightness(0) invert(1) opacity(1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-radius: 6px !important; 
+    filter: brightness(0) invert(1) !important;
+    opacity: 1 !important;
     transition: all 0.2s;
 }
 .text-options-button:hover {
-    filter: brightness(0) invert(1) opacity(1) !important;
-    background-color: rgba(255,255,255,0.1) !important;
+    filter: brightness(0) invert(1) !important;
+    border-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 /* Audio Player: True YouTube Music Layout */
@@ -536,8 +538,8 @@ input:focus, select:focus, textarea:focus {
 .audio-player-timeline-container {
     position: absolute !important;
     top: -2px !important;
-    left: 0 !important;
-    width: 100% !important;
+    left: 20px !important;
+    width: calc(100% - 40px) !important;
     height: 4px !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -558,8 +560,8 @@ input:focus, select:focus, textarea:focus {
 .bookmark-markers-container {
     position: absolute !important;
     top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
+    left: 20px !important;
+    width: calc(100% - 40px) !important;
     height: 4px !important;
 }
 .bookmark-markers-container div {
@@ -637,8 +639,8 @@ input:focus, select:focus, textarea:focus {
     width: calc(100% + 40px) !important;
 }
 .bookmark-markers-container {
-    left: 0 !important;
-    width: 100% !important;
+    left: 20px !important;
+    width: calc(100% - 40px) !important;
 }
 .duration-container {
     left: 90px !important;
@@ -810,18 +812,20 @@ select {
 #read_pane_container:not(.sticky-player) .audio-player-container {
     position: relative !important;
     height: auto !important;
-    width: 90% !important;
-    max-width: 600px !important;
-    margin: 0 auto 30px auto !important;
-    border-radius: 16px !important;
-    padding: 50px 20px 20px 20px !important;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.4) !important;
+    width: 95% !important;
+    max-width: 850px !important; /* Make it more alargado */
+    margin: 0 auto 20px auto !important;
+    border-radius: 12px !important;
+    padding: 35px 20px 15px 20px !important; /* Make it mas fino (less tall) */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
 }
 #read_pane_container:not(.sticky-player) .audio-player-top-container {
     display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 15px !important;
+    flex-wrap: nowrap !important; /* Force single row */
+    justify-content: space-between !important; /* Spread items evenly */
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
 }
 
 #read_pane_container:not(.sticky-player) .audio-player-controls-container {
@@ -832,13 +836,13 @@ select {
     padding-right: 0 !important;
 }
 #read_pane_container:not(.sticky-player) .audio-player-timeline-container {
-    top: 10px !important; /* Center timeline in top padding */
-    left: 0 !important;
-    width: 100% !important;
+    top: 22px !important;
+    left: 20px !important;
+    width: calc(100% - 40px) !important;
 }
 #read_pane_container:not(.sticky-player) .duration-container {
     position: absolute !important;
-    top: 15px !important;
+    top: -18px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
 }
