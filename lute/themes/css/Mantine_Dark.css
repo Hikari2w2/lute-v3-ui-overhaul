@@ -356,10 +356,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 /* Fix Status Form Numbers (1, 2, 3, 4, 5) */
-#status label {
-    color: #000 !important;
-    font-weight: 700 !important;
-}
+
 
 /* Fix Audio Player Rewind Dropdown (3 sec, 5 sec...) */
 #rewind-option {
@@ -404,4 +401,96 @@ input:focus, select:focus, textarea:focus {
 }
 #pin:hover {
     filter: brightness(0) invert(1) opacity(1) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color); 
+}
+::-webkit-scrollbar-thumb {
+    background: #4a4d53; 
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #6a6d73; 
+}
+
+/* Dictionary Image Button */
+#dict-image-btn {
+    background-color: transparent !important;
+}
+#dict-image-btn img {
+    filter: brightness(0) invert(1) opacity(0.7) !important;
+}
+#dict-image-btn.dict-btn-active {
+    background-color: rgba(255,255,255,0.1) !important;
+}
+
+/* Resize Gutters (Separators) */
+#read_pane_right::after, 
+.dictcontainer::after, 
+#read_pane_right::before, 
+.dictcontainer::before {
+    background-color: var(--border) !important;
+}
+
+/* YouTube Music Style Compact Audio Player */
+#read_pane_container {
+    --player-height: 80px !important;
+}
+.audio-player-container {
+    padding: 10px 20px !important;
+    border-radius: 0 !important;
+    border: none !important;
+    border-top: 1px solid var(--border) !important;
+    --timeline-height: 4px !important;
+}
+.audio-player-top-container {
+    gap: 15px !important;
+}
+.audio-button {
+    width: 32px !important;
+    height: 32px !important;
+}
+#play-btn {
+    width: 42px !important;
+    height: 42px !important;
+}
+.rewind-container {
+    gap: 0.4rem !important;
+}
+
+/* Monochromatic / Elegant Status Buttons */
+#status {
+    gap: 5px !important;
+}
+#status label {
+    background-color: transparent !important;
+    font-weight: 500 !important;
+    border-radius: 4px !important;
+    width: 35px !important;
+    height: 35px !important;
+}
+#status label[for="status-0"] { border: 1px solid var(--status-0-color) !important; color: var(--status-0-color) !important; }
+#status label[for="status-1"] { border: 1px solid var(--status-1-color) !important; color: var(--status-1-color) !important; }
+#status label[for="status-2"] { border: 1px solid var(--status-2-color) !important; color: var(--status-2-color) !important; }
+#status label[for="status-3"] { border: 1px solid var(--status-3-color) !important; color: var(--status-3-color) !important; }
+#status label[for="status-4"] { border: 1px solid var(--status-4-color) !important; color: var(--status-4-color) !important; }
+#status label[for="status-5"] { border: 1px solid var(--status-5-color) !important; color: var(--status-5-color) !important; }
+#status label[for="status-6"] { border: 1px solid var(--border) !important; color: var(--text-main) !important; }
+
+#status input:checked + label[for="status-0"] { background-color: rgba(77, 171, 247, 0.2) !important; }
+#status input:checked + label[for="status-1"] { background-color: rgba(240, 62, 62, 0.2) !important; }
+#status input:checked + label[for="status-2"] { background-color: rgba(245, 159, 0, 0.2) !important; }
+#status input:checked + label[for="status-3"] { background-color: rgba(252, 196, 25, 0.2) !important; }
+#status input:checked + label[for="status-4"] { background-color: rgba(140, 226, 0, 0.2) !important; }
+#status input:checked + label[for="status-5"] { background-color: rgba(64, 192, 87, 0.2) !important; }
+
+#status label:hover {
+    box-shadow: none !important;
+    background-color: rgba(255,255,255,0.05) !important;
 }
