@@ -1068,17 +1068,10 @@ body:has(#read_pane_container) .container {
    EDGE-TO-EDGE READING HEADER
    Break out of the 4% screen padding so the grey box touches the screen edges
    ================================================================ */
-#reading-header {
+#reading-header, #reading-footer {
     margin-left: -4.2vw !important;
-    padding-left: calc(4.2vw + 10px) !important; /* Keep the content aligned where it was */
-    width: calc(100% + 4.2vw) !important;
-    box-sizing: border-box !important;
-}
-
-/* When the dictionary is closed (Focus mode), stretch the right side to the edge too! */
-body.focus-mode-active #reading-header {
+    padding-left: calc(4.2vw + 10px) !important;
     margin-right: -4.2vw !important;
     padding-right: calc(4.2vw + 10px) !important;
-    width: calc(100% + 8.4vw) !important;
-    box-sizing: border-box !important;
+    width: auto !important;
 }
