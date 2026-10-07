@@ -132,9 +132,9 @@ div#read_pane_left div#thetext {
     line-height: 1.8 !important;
     font-size: 20px !important;
     padding: 10px 0 !important;
-    width: 100% !important;
+    width: 85% !important;
     max-width: none !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
 }
 span.status0 { color: var(--status-0-color) !important; border-bottom: 2px solid var(--status-0-color); background: transparent !important;}
 span.status1 { background-color: rgba(240, 62, 62, 0.2) !important; color: #fff !important; }
@@ -171,9 +171,9 @@ div#read_pane_left div#thetext {
     line-height: 1.8 !important;
     font-size: 20px !important;
     padding: 10px 0 !important;
-    width: 100% !important;
+    width: 85% !important;
     max-width: none !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
 }
 
 .text-options-btn-container, .reading-menu-item, .dict-menu-item {
@@ -753,13 +753,11 @@ input:focus, select:focus, textarea:focus {
     background-color: #ff0000 !important;
     width: 3px !important;
     height: 10px !important;
-    top: 0 !important;
+    top: 2px !important; /* Push down 2px to stop floating */
     margin-left: -1.5px !important;
     border-radius: 2px !important;
 }
-.audio-player-timeline-container:hover .bookmark-markers-container div {
-    top: 0 !important;
-}
+
 
 /* ---- DURATION TEXT ---- */
 .duration-container {
@@ -817,11 +815,11 @@ select {
 #read_pane_container:not(.sticky-player) .audio-player-container {
     position: relative !important;
     height: auto !important;
-    width: 100% !important;
-    max-width: none !important; /* Make it more alargado */
+    width: 85% !important;
+    max-width: none !important;
     margin: 0 auto 20px auto !important;
     border-radius: 12px !important;
-    padding: 65px 20px 15px 20px !important; /* Make it mas fino (less tall) */
+    padding: 65px 20px 15px 20px !important; /* Mas fino */
     box-shadow: 0 6px 20px rgba(0,0,0,0.3) !important;
 }
 #read_pane_container:not(.sticky-player) .audio-player-top-container {
@@ -843,14 +841,16 @@ select {
 
 #read_pane_container:not(.sticky-player) .duration-container {
     position: absolute !important;
-    top: 20px !important; /* 20px relative to timeline container = 40px relative to widget */
+    top: 22px !important; /* Move slightly down to center vertically */
     left: 50% !important;
-    transform: translateX(-30%) !important;
+    transform: translateX(-50%) !important; /* Perfectly centered */
     text-align: center !important;
     width: auto !important;
     padding-right: 0 !important;
     margin-bottom: 0 !important;
     display: block !important;
+    font-size: 16px !important; /* Make it smaller */
+    color: var(--text-muted) !important; /* Make it slightly dimmer */
 }
 
 
@@ -858,15 +858,17 @@ select {
     margin-left: 0 !important;
 }
 #read_pane_container:not(.sticky-player) #pin {
-    top: 15px !important;
-    right: 15px !important;
+    bottom: 15px !important;
+    top: auto !important;
+    right: 20px !important;
     transform: none !important;
+    margin: 0 !important;
 }
 
 div#read_pane_left .reading_header_container {
-    width: 100% !important;
+    width: 85% !important;
     max-width: none !important;
-    margin: 0 !important;
+    margin: 0 auto !important;
     padding: 10px 0 !important;
 }
 
