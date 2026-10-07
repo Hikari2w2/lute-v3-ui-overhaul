@@ -864,10 +864,10 @@ select {
 }
 
 div#read_pane_left .reading_header_container {
-    width: 100% !important;
+    width: 95% !important;
     max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0 auto !important;
+    padding: 10px 0 !important;
 }
 
 #read_pane_container:not(.sticky-player) .audio-player-timeline-container {
@@ -1060,4 +1060,25 @@ body:has(#read_pane_container) .container {
 /* 2. Make the unplayed track portion a solid color instead of transparent white */
 .timeline {
     background-color: #4b4c52 !important;
+}
+
+
+
+/* ================================================================
+   EDGE-TO-EDGE READING HEADER
+   Break out of the 4% screen padding so the grey box touches the screen edges
+   ================================================================ */
+#reading-header {
+    margin-left: -4.2vw !important;
+    padding-left: calc(4.2vw + 10px) !important; /* Keep the content aligned where it was */
+    width: calc(100% + 4.2vw) !important;
+    box-sizing: border-box !important;
+}
+
+/* When the dictionary is closed (Focus mode), stretch the right side to the edge too! */
+body.focus-mode-active #reading-header {
+    margin-right: -4.2vw !important;
+    padding-right: calc(4.2vw + 10px) !important;
+    width: calc(100% + 8.4vw) !important;
+    box-sizing: border-box !important;
 }
