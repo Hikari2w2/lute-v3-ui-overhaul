@@ -7,6 +7,7 @@
     --border: #373A40;
     --text-main: #C1C2C5;
     --text-bright: #FFFFFF;
+    --font-color: #E0E0E0 !important;
     --primary: #339af0;
     --primary-hover: #1c7ed6;
 
@@ -294,4 +295,50 @@ input:focus, select:focus, textarea:focus {
 }
 .tagify__tag-text {
     color: var(--text-bright) !important;
+}
+
+/* Fix reading menu top container white background */
+.reading_menu_logo_container {
+    background-color: transparent !important;
+}
+
+/* Fix text options buttons turning into gray blocks */
+.text-options-button {
+    background-color: transparent !important;
+    border: none !important;
+    filter: brightness(0) invert(1) opacity(0.7) !important;
+}
+.text-options-button:hover {
+    filter: brightness(0) invert(1) opacity(1) !important;
+}
+
+/* Fix audio player buttons turning into gray circles */
+.audio-button {
+    background-color: transparent !important;
+    border: none !important;
+    filter: brightness(0) invert(1) opacity(0.7) !important;
+}
+
+/* Fix Audio Player Timeline empty track */
+.timeline {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Fix Header Progress Bar (#read-slider) */
+.read-slide-container {
+    --read-slider-color: var(--primary) !important;
+}
+#read-slider {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+#read-slider::-moz-range-thumb {
+    background-color: var(--bg-color) !important;
+    border: 2px solid var(--primary) !important;
+}
+#read-slider::-webkit-slider-thumb {
+    background-color: var(--bg-color) !important;
+    border: 2px solid var(--primary) !important;
+}
+#navPrev, #navNext {
+    color: var(--primary) !important;
 }
