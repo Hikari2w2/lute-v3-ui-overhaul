@@ -494,3 +494,101 @@ input:focus, select:focus, textarea:focus {
     box-shadow: none !important;
     background-color: rgba(255,255,255,0.05) !important;
 }
+
+/* Fix Status 5 and 6 SVG Icons (Checkmark and Cross) */
+#status label[for="status-5"]::after, 
+#status label[for="status-6"]::after {
+    filter: brightness(0) invert(1) opacity(0.8) !important;
+}
+#status input:checked + label[for="status-5"]::after, 
+#status input:checked + label[for="status-6"]::after {
+    filter: brightness(0) invert(1) opacity(1) !important;
+}
+
+/* Left Menu Text Options (Monochromatic Outline Style) */
+.text-options-button {
+    background-color: transparent !important;
+    border: 1px solid #a5a5a5 !important;
+    border-radius: 6px !important;
+    filter: brightness(0) invert(1) opacity(0.5) !important;
+}
+.text-options-button:hover {
+    filter: brightness(0) invert(1) opacity(1) !important;
+}
+
+/* Audio Player: True YouTube Music Layout */
+#read_pane_container {
+    --player-height: 55px !important;
+}
+.audio-player-container {
+    padding: 0 20px !important;
+    position: relative !important;
+    overflow: visible !important;
+    border-top: none !important;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.2) !important;
+}
+.audio-player-top-container {
+    height: 100% !important;
+    align-items: center !important;
+}
+
+/* Timeline strictly at the absolute top edge */
+.audio-player-timeline-container {
+    position: absolute !important;
+    top: -2px !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 4px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background-color: transparent !important;
+    z-index: 10 !important;
+}
+.timeline {
+    height: 4px !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    background-color: rgba(255,255,255,0.1) !important;
+}
+/* Hide thumb handle until hover for cleaner look */
+.timeline::-webkit-slider-thumb { opacity: 0 !important; transition: opacity 0.2s; }
+.timeline:hover::-webkit-slider-thumb { opacity: 1 !important; }
+
+/* Bookmarks on timeline */
+.bookmark-markers-container {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 4px !important;
+}
+.bookmark-markers-container div {
+    height: 4px !important;
+    border-radius: 0 !important;
+    background-color: #ff4545 !important;
+    top: 0 !important;
+}
+
+/* Move Duration Text next to Play Button */
+.duration-container {
+    position: absolute !important;
+    left: 70px !important;
+    top: 18px !important;
+    font-size: 0.8rem !important;
+    color: var(--text-muted) !important;
+    display: flex !important;
+    gap: 4px !important;
+    width: auto !important;
+}
+.current-time::after {
+    content: " /";
+}
+
+/* Adjust Central Container layout to avoid overlap */
+.audio-player-central-container {
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+.audio-player-controls-container {
+    margin-left: 100px !important; /* Make room for duration text */
+}
