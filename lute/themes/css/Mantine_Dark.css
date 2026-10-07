@@ -641,10 +641,7 @@ input:focus, select:focus, textarea:focus {
 #reading_menu {
     border-right: 1px solid var(--border) !important;
 }
-.audio-player-timeline-container {
-    left: -20px !important;
-    width: calc(100% + 40px) !important;
-}
+/* Removed buggy -20px shift */
 .bookmark-markers-container {
     left: 20px !important;
     width: calc(100% - 40px) !important;
@@ -1042,4 +1039,11 @@ body:has(#read_pane_container) .container {
     height: 100% !important;
     top: 0 !important;
     margin: 0 !important;
+}
+
+
+/* Fix off-screen rendering of sticky timeline */
+.sticky-player .audio-player-timeline-container {
+    left: 0 !important;
+    width: 100% !important;
 }
