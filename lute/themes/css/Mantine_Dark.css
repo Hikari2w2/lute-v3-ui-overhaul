@@ -753,7 +753,7 @@ input:focus, select:focus, textarea:focus {
     background-color: #ff0000 !important;
     width: 3px !important;
     height: 10px !important;
-    top: 2px !important; /* Push down 2px to stop floating */
+    top: 0 !important;
     margin-left: -1.5px !important;
     border-radius: 2px !important;
 }
@@ -835,9 +835,7 @@ select {
     margin-left: 0 !important;
     justify-content: center !important;
 }
-#read_pane_container:not(.sticky-player) .audio-player-right-container {
-    padding-right: 0 !important;
-}
+
 
 #read_pane_container:not(.sticky-player) .duration-container {
     position: absolute !important;
@@ -895,7 +893,44 @@ div#read_pane_left .reading_header_container {
     margin: 0 !important;
     display: block !important;
 }
-.container {
+
+
+/* Force track heights to exactly 6px globally */
+.timeline, .timeline::-webkit-slider-runnable-track, .timeline::-moz-range-track {
+    height: 6px !important;
+    margin: 0 !important;
+}
+
+/* Force bookmark lines to perfectly match the 6px track */
+.bookmark-markers-container, .bookmark-markers-container div {
+    height: 6px !important;
+}
+.bookmark-markers-container div {
+    top: 0 !important; /* Start exactly at the top of the track */
+    transform: none !important; /* Remove previous offset hacks */
+}
+
+/* Make thumb 12px (slightly larger than 6px track to look like a bolita) */
+.timeline::-webkit-slider-thumb, .timeline::-moz-range-thumb {
+    width: 12px !important;
+    height: 12px !important;
+    margin-top: -3px !important; /* (12 - 6) / 2 = 3px offset to center it vertically on the 6px track */
+}
+
+#read_pane_container:not(.sticky-player) .audio-player-right-container {
+    justify-self: end !important;
+    padding-right: 50px !important; /* Make sure there's enough space for the pin button! */
+}
+#read_pane_container:not(.sticky-player) #pin {
+    bottom: 15px !important; /* Move slightly up to perfectly align with the circular buttons */
+    right: 25px !important;
+    top: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+}
+
+/* Only apply to container inside the reading pane if it exists */
+#read_pane_left .container {
     max-width: none !important;
     width: 100% !important;
     padding: 0 !important;
