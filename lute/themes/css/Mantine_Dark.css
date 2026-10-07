@@ -342,3 +342,66 @@ input:focus, select:focus, textarea:focus {
 #navPrev, #navNext {
     color: var(--primary) !important;
 }
+
+/* Fix reading menu sublist (e.g. Mobile, Desktop, Auto) */
+#reading_menu .reading-menu-sublist {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+}
+#reading_menu .reading-menu-sublist .reading-menu-item {
+    color: var(--text-main) !important;
+}
+#reading_menu .reading-menu-sublist .reading-menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Fix Status Form Numbers (1, 2, 3, 4, 5) */
+#status label {
+    color: #000 !important;
+    font-weight: 700 !important;
+}
+
+/* Fix Audio Player Rewind Dropdown (3 sec, 5 sec...) */
+#rewind-option {
+    padding: 2px 6px !important;
+    height: auto !important;
+    line-height: 1.2 !important;
+}
+
+/* Fix Dictionary Tabs (merriam, simple, dicti...) */
+#dicttabs {
+    background-color: var(--bg-color) !important;
+}
+.dict-btn {
+    background-color: var(--surface) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border) !important;
+}
+.dict-btn:hover {
+    background-color: rgba(255,255,255,0.05) !important;
+}
+.dict-btn.dict-btn-active {
+    background-color: rgba(51, 154, 240, 0.2) !important;
+    color: var(--text-bright) !important;
+    border-bottom: 2px solid var(--primary) !important;
+}
+#dicttabslayout .dict-btn::after {
+    display: none !important;
+}
+
+/* Fix missing Audio Player Pin Button */
+#pin {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21.2 8.4c.5.5.5 1.4 0 1.9l-2.6 2.6c-.5.5-1.4.5-1.9 0l-5.7-5.7c-.5-.5-.5-1.4 0-1.9l2.6-2.6c.5-.5 1.4-.5 1.9 0l5.7 5.7z'%3E%3C/path%3E%3Cpath d='M14.1 6.3L6.3 14.1c-.2.2-.4.4-.6.6l-3.3 3.3c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8l3.3-3.3c.2-.2.4-.4.6-.6l7.8-7.8'%3E%3C/path%3E%3C/svg%3E") !important;
+    background-size: 80% !important;
+    background-position: center !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    filter: brightness(0) invert(1) opacity(0.5) !important;
+    width: 20px !important;
+    height: 20px !important;
+    display: block !important;
+}
+#pin:hover {
+    filter: brightness(0) invert(1) opacity(1) !important;
+}
