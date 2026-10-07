@@ -915,9 +915,9 @@ div#read_pane_left .reading_header_container {
 
 /* Make thumb 12px (slightly larger than 6px track to look like a bolita) */
 .timeline::-webkit-slider-thumb, .timeline::-moz-range-thumb {
-    width: 12px !important;
-    height: 12px !important;
-    margin-top: -3px !important; /* (12 - 6) / 2 = 3px offset to center it vertically on the 6px track */
+    width: 16px !important;
+    height: 16px !important;
+    margin-top: -4px !important; /* (12 - 6) / 2 = 3px offset to center it vertically on the 6px track */
 }
 
 #read_pane_container:not(.sticky-player) .audio-player-right-container {
@@ -982,11 +982,16 @@ body:has(#read_pane_container) .container {
    ULTIMATE BOOKMARK ALIGNMENT FIX
    ================================================================ */
 
-/* Make the wrappers precisely 6px tall everywhere */
+/* Make the wrappers precisely 8px tall everywhere */
 .audio-player-timeline-container,
 #read_pane_container:not(.sticky-player) .audio-player-timeline-container,
 .sticky-player .audio-player-timeline-container {
-    height: 6px !important;
+    height: 8px !important;
+}
+
+/* Fix floating timeline on sticky player */
+.sticky-player .audio-player-timeline-container {
+    top: -8px !important;
 }
 
 /* Force both the timeline input and the marker container to absolutely fill the 6px wrapper */
