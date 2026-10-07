@@ -127,11 +127,14 @@ table.dataTable tbody td a { color: var(--primary) !important; font-weight: 500 
 
 /* Read Screen */
 #thetext {
-    background-color: var(--surface) !important;
-    padding: 20px !important;
-    border-radius: 8px !important;
+    background-color: var(--bg-color) !important;
+    color: var(--text-bright) !important;
     line-height: 1.8 !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
 }
 span.status0 { color: var(--status-0-color) !important; border-bottom: 2px solid var(--status-0-color); background: transparent !important;}
 span.status1 { background-color: rgba(240, 62, 62, 0.2) !important; color: #fff !important; }
@@ -167,10 +170,10 @@ span.status5 { background-color: rgba(64, 192, 87, 0.2) !important; color: #fff 
     color: var(--text-bright) !important;
     line-height: 1.8 !important;
     font-size: 20px !important;
-    padding: 10px 20px !important;
-    width: 95% !important;
-    max-width: 1200px !important;
-    margin: 0 auto !important;
+    padding: 10px 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
 }
 
 .text-options-btn-container, .reading-menu-item, .dict-menu-item {
@@ -696,16 +699,13 @@ input:focus, select:focus, textarea:focus {
 /* The actual track */
 .timeline {
     cursor: pointer !important;
-    height: 3px !important;
+    height: 10px !important;
     margin-top: 6px !important;
     background-color: rgba(255,255,255,0.2) !important;
     background-image: linear-gradient(var(--primary), var(--primary)) !important;
     transition: height 0.1s, margin-top 0.1s;
 }
-.timeline:hover {
-    height: 5px !important;
-    margin-top: 5px !important;
-}
+
 
 /* Bolita (Thumb) */
 .timeline::-webkit-slider-thumb {
@@ -715,7 +715,7 @@ input:focus, select:focus, textarea:focus {
     border-radius: 50% !important;
     border: none !important;
     opacity: 1 !important; cursor: pointer !important;
-    margin-top: -2.5px !important; /* Align bolita center with 3px track */
+    margin-top: 0 !important; /* Align bolita center with 3px track */
     box-shadow: none !important;
 }
 .timeline:hover::-webkit-slider-thumb {
@@ -737,7 +737,7 @@ input:focus, select:focus, textarea:focus {
 /* Bookmark "Bolitas" on the timeline */
 .bookmark-markers-container {
     top: 6px !important;
-    height: 3px !important;
+    height: 10px !important;
     transition: top 0.1s, height 0.1s;
 }
 .audio-player-timeline-container:hover .bookmark-markers-container {
@@ -753,12 +753,12 @@ input:focus, select:focus, textarea:focus {
     background-color: #ff0000 !important;
     width: 3px !important;
     height: 10px !important;
-    top: -3.5px !important;
+    top: 0 !important;
     margin-left: -1.5px !important;
     border-radius: 2px !important;
 }
 .audio-player-timeline-container:hover .bookmark-markers-container div {
-    top: -2.5px !important;
+    top: 0 !important;
 }
 
 /* ---- DURATION TEXT ---- */
@@ -817,8 +817,8 @@ select {
 #read_pane_container:not(.sticky-player) .audio-player-container {
     position: relative !important;
     height: auto !important;
-    width: 95% !important;
-    max-width: 850px !important; /* Make it more alargado */
+    width: 100% !important;
+    max-width: none !important; /* Make it more alargado */
     margin: 0 auto 20px auto !important;
     border-radius: 12px !important;
     padding: 45px 20px 15px 20px !important; /* Make it mas fino (less tall) */
@@ -840,11 +840,7 @@ select {
 #read_pane_container:not(.sticky-player) .audio-player-right-container {
     padding-right: 0 !important;
 }
-#read_pane_container:not(.sticky-player) .audio-player-timeline-container {
-    top: 15px !important;
-    left: 20px !important;
-    width: calc(100% - 40px) !important;
-}
+
 #read_pane_container:not(.sticky-player) .duration-container {
     position: absolute !important;
     top: auto !important;
@@ -862,4 +858,25 @@ select {
     transform: none !important;
 }
 
-.reading_header_container { width: 95% !important; max-width: 1200px !important; margin: 0 auto !important; padding: 10px 20px !important; }
+.reading_header_container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 10px 0 !important;
+}
+
+#read_pane_container:not(.sticky-player) .audio-player-timeline-container {
+    position: static !important;
+}
+#read_pane_container:not(.sticky-player) .timeline {
+    position: absolute !important;
+    top: 20px !important;
+    left: 20px !important;
+    width: calc(100% - 40px) !important;
+}
+#read_pane_container:not(.sticky-player) .bookmark-markers-container {
+    position: absolute !important;
+    top: 20px !important;
+    left: 25px !important; /* offset for thumb width */
+    width: calc(100% - 50px) !important;
+}
