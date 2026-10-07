@@ -680,3 +680,109 @@ input:focus, select:focus, textarea:focus {
 #play-btn {
     margin: 0 !important;
 }
+
+/* ---- ULTIMATE YOUTUBE MUSIC TIMELINE ---- */
+/* Increase timeline container height to fit the thumb bolita */
+.audio-player-timeline-container {
+    height: 15px !important;
+    top: -15px !important;
+    cursor: pointer !important;
+}
+/* The actual track */
+.timeline {
+    height: 3px !important;
+    margin-top: 6px !important;
+    background-color: rgba(255,255,255,0.2) !important;
+    background-image: linear-gradient(#ff0000, #ff0000) !important;
+    transition: height 0.1s, margin-top 0.1s;
+}
+.timeline:hover {
+    height: 5px !important;
+    margin-top: 5px !important;
+}
+
+/* Bolita (Thumb) */
+.timeline::-webkit-slider-thumb {
+    width: 14px !important;
+    height: 14px !important;
+    background-color: #ff0000 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    opacity: 0 !important;
+    margin-top: -5px !important; /* Align bolita center with 3px track */
+    box-shadow: none !important;
+}
+.timeline:hover::-webkit-slider-thumb {
+    opacity: 1 !important;
+}
+.timeline::-moz-range-thumb {
+    width: 14px !important;
+    height: 14px !important;
+    background-color: #ff0000 !important;
+    border-radius: 50% !important;
+    border: none !important;
+    opacity: 0 !important;
+    box-shadow: none !important;
+}
+.timeline:hover::-moz-range-thumb {
+    opacity: 1 !important;
+}
+
+/* Bookmark "Bolitas" on the timeline */
+.bookmark-markers-container {
+    top: 6px !important;
+    height: 3px !important;
+    transition: top 0.1s, height 0.1s;
+}
+.audio-player-timeline-container:hover .bookmark-markers-container {
+    top: 5px !important;
+    height: 5px !important;
+}
+.bookmark-markers-container div {
+    width: 6px !important;
+    height: 6px !important;
+    background-color: #ffcc00 !important; /* Yellow like YT ads/markers */
+    border-radius: 50% !important;
+    top: -1.5px !important;
+}
+.audio-player-timeline-container:hover .bookmark-markers-container div {
+    top: -0.5px !important;
+}
+
+/* ---- DURATION TEXT ---- */
+.duration-container {
+    font-size: 0.95rem !important;
+    color: var(--text-bright) !important;
+    font-weight: 500 !important;
+    top: 20px !important;
+    left: 80px !important;
+}
+
+/* ---- PLAY AND PIN BUTTON POSITIONING ---- */
+#play-btn {
+    width: 44px !important;
+    height: 44px !important;
+    margin-left: 15px !important;
+}
+.audio-player-right-container {
+    padding-right: 35px !important; /* Give space for Pin button */
+}
+#pin {
+    left: auto !important;
+    right: 20px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* ---- DROPDOWN DARK MODE ---- */
+select {
+    color-scheme: dark !important;
+}
+#rewind-option {
+    background-color: var(--surface) !important;
+    color: var(--text-bright) !important;
+}
+#rewind-option option {
+    background-color: var(--surface) !important;
+    color: var(--text-bright) !important;
+}
