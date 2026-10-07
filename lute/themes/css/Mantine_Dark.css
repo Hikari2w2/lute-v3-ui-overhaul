@@ -1047,3 +1047,17 @@ body:has(#read_pane_container) .container {
     left: 0 !important;
     width: 100% !important;
 }
+
+
+/* ================================================================
+   SOLID TIMELINE (BLOCK TEXT BLEED-THROUGH)
+   ================================================================ */
+/* 1. Make the container act as a solid backdrop the exact color of the player box */
+.audio-player-timeline-container {
+    background-color: var(--surface) !important;
+}
+
+/* 2. Make the unplayed track portion a solid color instead of transparent white */
+.timeline {
+    background-color: #4b4c52 !important;
+}
