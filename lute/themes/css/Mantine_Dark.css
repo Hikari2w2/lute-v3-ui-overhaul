@@ -864,10 +864,10 @@ select {
 }
 
 div#read_pane_left .reading_header_container {
-    width: 95% !important;
+    width: 100% !important;
     max-width: none !important;
-    margin: 0 auto !important;
-    padding: 10px 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 #read_pane_container:not(.sticky-player) .audio-player-timeline-container {
