@@ -36,10 +36,11 @@ a {
 }
 
 /* FIXES FOR ORIGINAL LUTE OVERRIDES */
-.menu-item > span, .menu-item > a.home-link {
+.menu-item > span, .menu-item a.home-link {
     color: var(--text-main) !important;
+    text-decoration: none !important;
 }
-.menu-item > span:hover, .menu-item > a.home-link:hover {
+.menu-item > span:hover, .menu-item a.home-link:hover {
     color: var(--primary) !important;
 }
 
@@ -1335,4 +1336,65 @@ div.ui-tooltip .tooltip-image {
     mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
     -webkit-mask-size: contain;
     mask-size: contain;
+}
+
+
+/* ================================================================
+   HOME PAGE IMPROVEMENTS
+   Search bar centering, Lute logo visibility
+   ================================================================ */
+
+/* Fix Lute Logo to keep details visible */
+.lutelogo {
+    filter: invert(1) hue-rotate(180deg) brightness(0.9) !important;
+}
+
+/* Center DataTables Search Bar and redesign it */
+.dataTables_wrapper {
+    position: relative !important;
+}
+
+/* Position length menu absolutely to keep search bar perfectly centered */
+.dataTables_length {
+    position: absolute !important;
+    left: 20px !important;
+    top: 25px !important;
+    z-index: 10 !important;
+}
+
+.dataTables_filter {
+    float: none !important;
+    text-align: center !important;
+    margin-bottom: 25px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.dataTables_filter label {
+    display: flex !important;
+    align-items: center !important;
+    font-size: 15px !important;
+    color: var(--text-main) !important;
+    font-weight: 500 !important;
+}
+
+.dataTables_filter input {
+    background-color: rgba(0,0,0,0.2) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-bright) !important;
+    border-radius: 20px !important;
+    padding: 10px 20px !important;
+    margin-left: 15px !important;
+    width: 250px !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.dataTables_filter input:focus {
+    border-color: var(--primary) !important;
+    background-color: rgba(0,0,0,0.4) !important;
+    box-shadow: 0 0 0 3px rgba(51, 154, 240, 0.15) !important;
+    width: 320px !important;
+    outline: none !important;
 }
