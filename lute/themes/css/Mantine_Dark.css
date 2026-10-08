@@ -480,19 +480,19 @@ input:focus, select:focus, textarea:focus {
     width: 35px !important;
     height: 35px !important;
 }
-#status label[for="status-0"] { border: 1px solid var(--status-0-color) !important; color: var(--status-0-color) !important; }
-#status label[for="status-1"] { border: 1px solid var(--status-1-color) !important; color: var(--status-1-color) !important; }
-#status label[for="status-2"] { border: 1px solid var(--status-2-color) !important; color: var(--status-2-color) !important; }
-#status label[for="status-3"] { border: 1px solid var(--status-3-color) !important; color: var(--status-3-color) !important; }
-#status label[for="status-4"] { border: 1px solid var(--status-4-color) !important; color: var(--status-4-color) !important; }
-#status label[for="status-5"] { border: 1px solid var(--status-5-color) !important; color: var(--status-5-color) !important; }
+#status label[for="status-0"] { border: 1px solid var(--status-1-color) !important; color: var(--status-1-color) !important; }
+#status label[for="status-1"] { border: 1px solid var(--status-2-color) !important; color: var(--status-2-color) !important; }
+#status label[for="status-2"] { border: 1px solid var(--status-3-color) !important; color: var(--status-3-color) !important; }
+#status label[for="status-3"] { border: 1px solid var(--status-4-color) !important; color: var(--status-4-color) !important; }
+#status label[for="status-4"] { border: 1px solid var(--status-5-color) !important; color: var(--status-5-color) !important; }
+#status label[for="status-5"] { border: 1px solid var(--status-99-color) !important; color: var(--status-99-color) !important; }
 #status label[for="status-6"] { border: 1px solid var(--border) !important; color: var(--text-main) !important; }
 
-#status input:checked + label[for="status-0"] { background-color: rgba(77, 171, 247, 0.2) !important; }
-#status input:checked + label[for="status-1"] { background-color: rgba(240, 62, 62, 0.2) !important; }
-#status input:checked + label[for="status-2"] { background-color: rgba(245, 159, 0, 0.2) !important; }
-#status input:checked + label[for="status-3"] { background-color: rgba(252, 196, 25, 0.2) !important; }
-#status input:checked + label[for="status-4"] { background-color: rgba(140, 226, 0, 0.2) !important; }
+#status input:checked + label[for="status-0"] { background-color: rgba(240, 62, 62, 0.2) !important; }
+#status input:checked + label[for="status-1"] { background-color: rgba(245, 159, 0, 0.2) !important; }
+#status input:checked + label[for="status-2"] { background-color: rgba(252, 196, 25, 0.2) !important; }
+#status input:checked + label[for="status-3"] { background-color: rgba(140, 226, 0, 0.2) !important; }
+#status input:checked + label[for="status-4"] { background-color: rgba(64, 192, 87, 0.2) !important; }
 #status input:checked + label[for="status-5"] { background-color: rgba(64, 192, 87, 0.2) !important; }
 
 #status label:hover {
