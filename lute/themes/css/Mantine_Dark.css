@@ -1206,3 +1206,19 @@ div.ui-tooltip .tooltip-image {
     background-color: rgba(64, 192, 87, 0.1) !important;
     border-color: rgba(64, 192, 87, 0.6) !important;
 }
+
+
+/* Prevent 'Link to parent' from wrapping to multiple lines */
+#sync-status-container label {
+    white-space: nowrap !important;
+}
+
+#sync-status-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 5px !important;
+}
+
+#sync-status-container input[type="checkbox"] {
+    margin: 0 !important;
+}
