@@ -1231,13 +1231,13 @@ div.ui-tooltip .tooltip-image {
     padding-bottom: 10px !important;
     border-top: 1px solid rgba(255,255,255,0.05) !important;
     margin-top: 10px !important;
-    background-color: transparent !important;
+    background-color: var(--surface) !important;
 }
 
 #reading-footer > p, #final_page_controls > p:first-child {
     display: flex !important;
     justify-content: center !important;
-    gap: 20px !important;
+    gap: 8px !important;
     margin: 0 !important;
 }
 
@@ -1268,6 +1268,21 @@ div.ui-tooltip .tooltip-image {
     transform: translateY(0);
 }
 
+
+
+/* 0. Previous Page (Left Arrow) */
+#footerPrevPage { border-color: rgba(255,255,255,0.2) !important; }
+#footerPrevPage::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--text-main);
+    -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='19' y1='12' x2='5' y2='12'%3E%3C/line%3E%3Cpolyline points='12 19 5 12 12 5'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+    mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='19' y1='12' x2='5' y2='12'%3E%3C/line%3E%3Cpolyline points='12 19 5 12 12 5'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
 /* 1. Mark Rest As Known & Next Page (Check + Right Arrow) */
 #footerMarkRestAsKnownNextPage {
     border-color: #40c057 !important;
