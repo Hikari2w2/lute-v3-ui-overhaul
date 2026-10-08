@@ -137,12 +137,12 @@ div#read_pane_left div#thetext {
     max-width: none !important;
     margin: 0 auto !important;
 }
-span.status0 { color: var(--status-0-color) !important; border-bottom: 2px solid var(--status-0-color); background: transparent !important;}
+span.status0 { color: var(--status-0-color) !important; border-bottom: none !important; background: transparent !important;}
 span.status1 { background-color: rgba(240, 62, 62, 0.35) !important; color: #fff !important; }
 span.status2 { background-color: rgba(245, 159, 0, 0.25) !important; color: #fff !important; }
 span.status3 { background-color: rgba(252, 196, 25, 0.15) !important; color: #fff !important; }
-span.status4 { background-color: rgba(140, 226, 0, 0.10) !important; color: #fff !important; }
-span.status5 { background-color: rgba(64, 192, 87, 0.05) !important; color: #fff !important; }
+span.status4 { background-color: rgba(140, 226, 0, 0.15) !important; color: #fff !important; }
+span.status5 { background-color: rgba(64, 192, 87, 0.15) !important; color: #fff !important; }
 
 
 /* Container Spacing */
@@ -491,9 +491,9 @@ input:focus, select:focus, textarea:focus {
 #status input:checked + label[for="status-0"] { background-color: rgba(240, 62, 62, 0.35) !important; }
 #status input:checked + label[for="status-1"] { background-color: rgba(245, 159, 0, 0.25) !important; }
 #status input:checked + label[for="status-2"] { background-color: rgba(252, 196, 25, 0.15) !important; }
-#status input:checked + label[for="status-3"] { background-color: rgba(140, 226, 0, 0.10) !important; }
-#status input:checked + label[for="status-4"] { background-color: rgba(64, 192, 87, 0.05) !important; }
-#status input:checked + label[for="status-5"] { background-color: rgba(64, 192, 87, 0.05) !important; }
+#status input:checked + label[for="status-3"] { background-color: rgba(140, 226, 0, 0.15) !important; }
+#status input:checked + label[for="status-4"] { background-color: rgba(64, 192, 87, 0.15) !important; }
+#status input:checked + label[for="status-5"] { background-color: rgba(64, 192, 87, 0.15) !important; }
 
 #status label:hover {
     box-shadow: none !important;
