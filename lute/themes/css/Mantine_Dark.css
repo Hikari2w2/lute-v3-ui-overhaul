@@ -1075,3 +1075,60 @@ body:has(#read_pane_container) .container {
     padding-right: calc(4.2vw + 10px) !important;
     width: auto !important;
 }
+
+
+/* ================================================================
+   TERM POPUP (DICTIONARY TOOLTIP) OVERHAUL
+   ================================================================ */
+div.ui-tooltip {
+    background-color: var(--surface) !important;
+    color: var(--text-main) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5) !important;
+    padding: 15px !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+div.ui-tooltip b {
+    color: var(--text-bright) !important;
+}
+
+div.ui-tooltip i {
+    color: #a6a7ab !important;
+}
+
+div.ui-tooltip .termpopup-tag {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: var(--text-bright) !important;
+    border: 1px solid var(--border) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
+    font-size: 12px !important;
+    margin-left: 5px !important;
+}
+
+div.ui-tooltip p {
+    margin-bottom: 10px !important;
+}
+
+div.ui-tooltip p:last-child {
+    margin-bottom: 0 !important;
+}
+
+div.ui-tooltip .small-flash-notice {
+    color: var(--primary) !important;
+    font-weight: 500 !important;
+}
+
+div.ui-tooltip .tooltip-image {
+    border-radius: 6px !important;
+    margin-right: 8px !important;
+    margin-bottom: 8px !important;
+    border: 1px solid var(--border) !important;
+}
+
+/* Also style the dictionary term list items to match */
+#dicttabs .dict-btn {
+    border-radius: 4px !important;
+}
