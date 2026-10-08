@@ -1247,9 +1247,9 @@ div.ui-tooltip .tooltip-image {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 48px !important;
-    height: 38px !important;
-    border-radius: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 6px !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
     border: 1px solid var(--border) !important;
@@ -1270,7 +1270,7 @@ div.ui-tooltip .tooltip-image {
 
 /* 1. Mark Rest As Known & Next Page (Check + Right Arrow) */
 #footerMarkRestAsKnownNextPage {
-    border-color: rgba(64, 192, 87, 0.3) !important;
+    border-color: #40c057 !important;
 }
 #footerMarkRestAsKnownNextPage::after {
     content: "";
@@ -1278,8 +1278,8 @@ div.ui-tooltip .tooltip-image {
     width: 20px;
     height: 20px;
     background-color: #40c057;
-    -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='14 9 7 16 3 12'%3E%3C/polyline%3E%3Cline x1='14' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cpolyline points='18 9 21 12 18 15'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
-    mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='14 9 7 16 3 12'%3E%3C/polyline%3E%3Cline x1='14' y1='12' x2='21' y2='12'%3E%3C/line%3E%3Cpolyline points='18 9 21 12 18 15'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+    -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
+    mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E") no-repeat center;
     -webkit-mask-size: contain;
     mask-size: contain;
 }
@@ -1289,6 +1289,7 @@ div.ui-tooltip .tooltip-image {
 }
 
 /* 2. Just Next Page (Right Arrow) */
+#footerNextPage { border-color: rgba(255,255,255,0.2) !important; }
 #footerNextPage::after {
     content: "";
     display: inline-block;
@@ -1303,7 +1304,7 @@ div.ui-tooltip .tooltip-image {
 
 /* 3. Final Page: Mark Rest As Known (Double Check) */
 #footerMarkRestAsKnown {
-    border-color: rgba(64, 192, 87, 0.3) !important;
+    border-color: #40c057 !important;
 }
 #footerMarkRestAsKnown::after {
     content: "";
@@ -1322,6 +1323,7 @@ div.ui-tooltip .tooltip-image {
 }
 
 /* 4. Final Page: Done (Single Check) */
+#footerDone { border-color: rgba(255,255,255,0.2) !important; }
 #footerDone::after {
     content: "";
     display: inline-block;
