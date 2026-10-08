@@ -81,18 +81,17 @@
           {{ form.sync_status(class="form-control", disabled=True) }}
           <label for="sync_status">Link to parent</label>
         </div>
+        <div id="term-button-container">
+          {% if term.id %}
+          <button id="delete" type="button" class="btn" title="Delete" onclick="deleteTerm()">Delete</button>
+          {% endif %}
+          <button id="btnsubmit" type="submit" title="Save (Shortcut: Control+Enter)" class="btn btn-primary">Save</button>
+        </div>
       </div>
 
       <div style="display: none">{{ form.current_image(class="form-control") }}</div>
 
       <div>{{ form.termtagslist(class="form-control") }}</div>
-
-      <div id="term-button-container">
-          {% if term.id %}
-          <button id="delete" type="button" class="btn" onclick="deleteTerm()">Delete</button>
-          {% endif %}
-          <button id="btnsubmit" type="submit" title="Shortcut: Control+Enter" class="btn btn-primary">Save</button>
-      </div>
     </div>
   </form>
 </div>

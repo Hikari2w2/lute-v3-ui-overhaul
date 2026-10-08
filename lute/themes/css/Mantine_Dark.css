@@ -1143,7 +1143,8 @@ div.ui-tooltip .tooltip-image {
     display: flex !important;
     justify-content: flex-end !important;
     gap: 10px !important;
-    margin-top: 15px !important;
+    margin-top: 0 !important;
+    margin-left: auto !important;
 }
 
 #term-button-container #delete,
@@ -1186,7 +1187,7 @@ div.ui-tooltip .tooltip-image {
 
 /* Save Button (Monochromatic Floppy Disk) */
 #term-button-container #btnsubmit {
-    border: 1px solid var(--border) !important;
+    border: 1px solid rgba(64, 192, 87, 0.3) !important;
 }
 
 #term-button-container #btnsubmit::before {
@@ -1194,7 +1195,7 @@ div.ui-tooltip .tooltip-image {
     display: inline-block;
     width: 18px;
     height: 18px;
-    background-color: var(--text-bright);
+    background-color: #40c057;
     -webkit-mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z'/%3E%3Cpolyline points='17 21 17 13 7 13 7 21'/%3E%3Cpolyline points='7 3 7 8 15 8'/%3E%3C/svg%3E") no-repeat center;
     mask: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z'/%3E%3Cpolyline points='17 21 17 13 7 13 7 21'/%3E%3Cpolyline points='7 3 7 8 15 8'/%3E%3C/svg%3E") no-repeat center;
     -webkit-mask-size: contain;
@@ -1202,6 +1203,6 @@ div.ui-tooltip .tooltip-image {
 }
 
 #term-button-container #btnsubmit:hover {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border-color: rgba(255, 255, 255, 0.4) !important;
+    background-color: rgba(64, 192, 87, 0.1) !important;
+    border-color: rgba(64, 192, 87, 0.6) !important;
 }
