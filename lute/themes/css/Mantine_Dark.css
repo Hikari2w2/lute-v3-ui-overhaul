@@ -1134,13 +1134,48 @@ div.ui-tooltip .tooltip-image {
 /* ================================================================
    TERM FORM BUTTONS OVERHAUL (DELETE & SAVE)
    Convert text buttons into clean monochromatic icons
+   and place inline with status container via 100% Pure CSS
    ================================================================ */
 
-#term-button-container {
+#term {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.4rem 0.2rem !important;
+}
+
+#term > div {
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+#term > #status-container {
+    width: auto !important;
+    flex: 1 1 auto !important;
+    order: 5 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+#term > #term-button-container {
+    width: auto !important;
+    flex: 0 0 auto !important;
+    order: 6 !important;
+    margin: 0 !important;
+    margin-left: auto !important;
     display: flex !important;
     justify-content: flex-end !important;
-    gap: 10px !important;
-    margin-top: 15px !important;
+    gap: 8px !important;
+    align-items: center !important;
+}
+
+#term > div:has(#termtagslist),
+#term > div:nth-last-of-type(2) {
+    width: 100% !important;
+    order: 7 !important;
 }
 
 #term-button-container #delete,
@@ -1161,7 +1196,26 @@ div.ui-tooltip .tooltip-image {
 
 /* Delete Button (Red Trash Can) */
 #term-button-container #delete {
+    position: relative !important;
     border: 1px solid rgba(240, 62, 62, 0.3) !important;
+}
+
+#term-button-container #delete:hover::after {
+    content: "Delete";
+    position: absolute;
+    bottom: calc(100% + 6px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1A1B1E;
+    color: #C1C2C5;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 500;
+    white-space: nowrap;
+    border: 1px solid #373A40;
+    pointer-events: none;
+    z-index: 1000;
 }
 
 #term-button-container #delete::before {
