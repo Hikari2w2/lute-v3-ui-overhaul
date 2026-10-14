@@ -1691,7 +1691,7 @@ div.dt-container .dt-length,
     z-index: 10 !important;
 }
 
-/* Center the top controls row containing search */
+/* Center the top controls row containing search vertically and horizontally */
 div.dt-container div.dt-layout-row:has(.dt-search),
 div.dt-container div.dt-layout-row:first-child,
 div.dataTables_wrapper > div:first-child {
@@ -1699,6 +1699,7 @@ div.dataTables_wrapper > div:first-child {
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
+    margin-top: 28px !important;
     margin-bottom: 24px !important;
     clear: both !important;
 }
