@@ -1591,3 +1591,81 @@ div.dataTables_filter input:focus {
     line-height: 1.4 !important;
     box-sizing: border-box !important;
 }
+
+
+/* ================================================================
+   BOOK ACTIONS DROPDOWN (... MENU) OVERHAUL
+   Dark mode contextual action menu in data tables
+   ================================================================ */
+
+.book-action-dropdown {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.book-action-dropdown > span {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    color: var(--text-main) !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    transition: all 0.2s ease !important;
+}
+
+.book-action-dropdown:hover > span,
+.book-action-dropdown > span:hover {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: var(--text-bright) !important;
+}
+
+.book-action-dropdown-content {
+    display: none;
+    position: absolute !important;
+    top: calc(100% + 4px) !important;
+    right: 0 !important;
+    left: auto !important;
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    padding: 6px !important;
+    min-width: 140px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
+    z-index: 1000 !important;
+}
+
+.book-action-dropdown:hover .book-action-dropdown-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+}
+
+table.dataTable tbody td .book-action-dropdown-content a,
+.book-action-dropdown-content a {
+    color: var(--text-main) !important;
+    padding: 8px 14px !important;
+    text-decoration: none !important;
+    display: block !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    border-radius: 6px !important;
+    text-align: left !important;
+    transition: all 0.15s ease !important;
+}
+
+table.dataTable tbody td .book-action-dropdown-content a:hover,
+.book-action-dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: var(--primary) !important;
+}
+
+table.dataTable tbody td .book-action-dropdown-content a[onclick*="delete"]:hover,
+.book-action-dropdown-content a[onclick*="delete"]:hover,
+.book-action-dropdown-content a:last-child:hover {
+    background-color: rgba(240, 62, 62, 0.12) !important;
+    color: var(--status-1-color) !important;
+}
