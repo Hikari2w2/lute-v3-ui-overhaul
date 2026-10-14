@@ -1692,6 +1692,7 @@ div.dt-container .dt-length,
 }
 
 /* Center the top controls row containing search */
+div.dt-container div.dt-layout-row:has(.dt-search),
 div.dt-container div.dt-layout-row:first-child,
 div.dataTables_wrapper > div:first-child {
     display: flex !important;
@@ -1699,16 +1700,30 @@ div.dataTables_wrapper > div:first-child {
     align-items: center !important;
     width: 100% !important;
     margin-bottom: 24px !important;
-    text-align: center !important;
+    clear: both !important;
 }
 
-div.dt-container div.dt-layout-row:first-child > div.dt-layout-cell,
-div.dt-container div.dt-layout-cell:has(.dt-search) {
+/* Hide empty topStart cell in search row so it doesn't push search bar to the right */
+div.dt-container div.dt-layout-row:has(.dt-search) .dt-layout-cell.dt-start,
+div.dt-container div.dt-layout-row:first-child .dt-layout-cell.dt-start {
+    display: none !important;
+    width: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Make topEnd cell full width and centered */
+div.dt-container div.dt-layout-row:has(.dt-search) .dt-layout-cell.dt-end,
+div.dt-container div.dt-layout-row:first-child .dt-layout-cell.dt-end,
+div.dt-container .dt-layout-cell:has(.dt-search) {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
     text-align: center !important;
+    float: none !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
 }
 
 div.dt-search,
@@ -1716,7 +1731,7 @@ div.dataTables_filter {
     float: none !important;
     text-align: center !important;
     margin: 0 auto !important;
-    display: inline-flex !important;
+    display: flex !important;
     justify-content: center !important;
     align-items: center !important;
 }
