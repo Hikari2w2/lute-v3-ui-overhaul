@@ -1601,18 +1601,19 @@ div.dataTables_filter input:focus {
 .book-action-dropdown {
     position: relative !important;
     display: inline-block !important;
+    padding-bottom: 6px !important; /* Bridges mouse travel downwards */
 }
 
 .book-action-dropdown > span {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 28px !important;
-    height: 28px !important;
+    width: 32px !important;
+    height: 30px !important;
     border-radius: 6px !important;
     cursor: pointer !important;
     color: var(--text-main) !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
     line-height: 1 !important;
     transition: all 0.2s ease !important;
 }
@@ -1626,31 +1627,42 @@ div.dataTables_filter input:focus {
 .book-action-dropdown-content {
     display: none;
     position: absolute !important;
-    top: calc(100% + 4px) !important;
+    top: 100% !important;
     right: 0 !important;
     left: auto !important;
     background-color: var(--surface) !important;
     border: 1px solid var(--border) !important;
     border-radius: 8px !important;
     padding: 6px !important;
-    min-width: 140px !important;
+    min-width: 155px !important;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45) !important;
     z-index: 1000 !important;
+}
+
+/* Invisible hover bridge to prevent mouseout when moving cursor down or diagonally */
+.book-action-dropdown-content::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -14px !important;
+    left: -20px !important;
+    right: 0 !important;
+    height: 16px !important;
+    display: block !important;
 }
 
 .book-action-dropdown:hover .book-action-dropdown-content {
     display: flex !important;
     flex-direction: column !important;
-    gap: 2px !important;
+    gap: 3px !important;
 }
 
 table.dataTable tbody td .book-action-dropdown-content a,
 .book-action-dropdown-content a {
     color: var(--text-main) !important;
-    padding: 8px 14px !important;
+    padding: 9px 16px !important;
     text-decoration: none !important;
     display: block !important;
-    font-size: 13px !important;
+    font-size: 14.5px !important;
     font-weight: 500 !important;
     border-radius: 6px !important;
     text-align: left !important;
