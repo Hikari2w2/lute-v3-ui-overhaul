@@ -1455,3 +1455,82 @@ div.dataTables_filter input:focus {
     width: 320px !important;
     outline: none !important;
 }
+
+
+/* ================================================================
+   FLASH NOTICES & ALERTS OVERHAUL (DARK MODE)
+   Convert yellow Bootstrap alerts into modern Mantine dark cards
+   ================================================================ */
+
+.flash-notice {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 4px solid var(--primary) !important;
+    border-radius: 8px !important;
+    padding: 14px 18px !important;
+    margin: 16px 0 24px 0 !important;
+    color: var(--text-bright) !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+    box-sizing: border-box !important;
+}
+
+.flash-notice p {
+    margin: 4px 0 !important;
+    color: var(--text-bright) !important;
+}
+
+.flash-notice p:first-child {
+    margin-top: 0 !important;
+}
+
+.flash-notice p:last-child {
+    margin-bottom: 0 !important;
+}
+
+.flash-notice a {
+    color: var(--primary) !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+}
+
+.flash-notice a:hover {
+    color: var(--primary-hover) !important;
+}
+
+.flash-notice-narrow {
+    background-color: var(--surface) !important;
+    border: 1px solid rgba(240, 62, 62, 0.35) !important;
+    border-left: 4px solid var(--status-1-color) !important;
+    border-radius: 6px !important;
+    padding: 10px 14px !important;
+    margin: 10px 0 !important;
+    color: var(--text-bright) !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    box-sizing: border-box !important;
+}
+
+.flash-notice-narrow a {
+    color: var(--primary) !important;
+    text-decoration: underline !important;
+    font-weight: 600 !important;
+}
+
+.flash-notice-narrow a:hover {
+    color: var(--primary-hover) !important;
+}
+
+.small-flash-notice {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 3px solid var(--primary) !important;
+    border-radius: 6px !important;
+    padding: 6px 12px !important;
+    margin: 6px 0 !important;
+    color: var(--text-bright) !important;
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+    box-sizing: border-box !important;
+}
