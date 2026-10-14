@@ -66,17 +66,22 @@ div.dt-container .dt-search input {
 }
 
 /* Settings gear icon in table footer */
-#datatables_config_widget,
-#datatables_config_widget img,
+#datatables_config_widget {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-right: 6px !important;
+    cursor: pointer !important;
+    filter: none !important;
+}
+
 #datatables_config_toggle {
-    filter: invert(1) brightness(0.85) !important;
-    opacity: 0.75 !important;
+    filter: invert(1) brightness(0.9) !important;
+    opacity: 0.8 !important;
     cursor: pointer !important;
     transition: all 0.2s ease !important;
     vertical-align: middle !important;
 }
 
-#datatables_config_widget:hover img,
 #datatables_config_toggle:hover {
     filter: invert(1) brightness(1) !important;
     opacity: 1 !important;
@@ -87,10 +92,26 @@ div.dt-container .dt-search input {
     border: 1px solid var(--border) !important;
     border-radius: 6px !important;
     padding: 6px 10px !important;
-    margin-left: 8px !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    gap: 8px !important;
+    margin-top: 8px !important;
+    margin-left: 0 !important;
+}
+
+#datatables_config_items[style*="display: none"] {
+    display: none !important;
+}
+
+#datatables_config_items button.dt-button {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--text-bright) !important;
+    border-radius: 4px !important;
+    padding: 4px 8px !important;
+    cursor: pointer !important;
+}
+
+#datatables_config_items button.dt-button:hover {
+    background-color: rgba(255, 255, 255, 0.12) !important;
+    color: var(--primary) !important;
 }
 
 /* Pagination container */
