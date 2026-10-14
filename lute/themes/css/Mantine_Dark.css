@@ -100,18 +100,97 @@ div.dt-container .dt-search input {
     display: none !important;
 }
 
-#datatables_config_items button.dt-button {
+/* Column Visibility & Action Buttons in config */
+#datatables_config_items button.dt-button,
+div.dt-buttons > .dt-button,
+button.buttons-colvis {
     background-color: rgba(255, 255, 255, 0.06) !important;
     border: 1px solid var(--border) !important;
     color: var(--text-bright) !important;
-    border-radius: 4px !important;
-    padding: 4px 8px !important;
+    border-radius: 6px !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
     cursor: pointer !important;
+    transition: all 0.15s ease !important;
 }
 
-#datatables_config_items button.dt-button:hover {
+#datatables_config_items button.dt-button:hover,
+div.dt-buttons > .dt-button:hover,
+button.buttons-colvis:hover {
     background-color: rgba(255, 255, 255, 0.12) !important;
     color: var(--primary) !important;
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* ================================================================
+   COLVIS / BUTTON COLLECTION POPUP MENU (DARK MODE)
+   ================================================================ */
+
+div.dt-button-collection {
+    position: absolute !important;
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    padding: 6px !important;
+    width: auto !important;
+    min-width: 180px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+    z-index: 2002 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px !important;
+}
+
+div.dt-button-collection-title {
+    color: var(--text-bright) !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    border-bottom: 1px solid var(--border) !important;
+    padding: 4px 8px 8px 8px !important;
+    margin-bottom: 4px !important;
+    text-align: left !important;
+}
+
+div.dt-button-collection .dt-button {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 6px !important;
+    color: var(--text-main) !important;
+    padding: 8px 14px !important;
+    margin: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    font-size: 13.5px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    transition: all 0.15s ease !important;
+}
+
+div.dt-button-collection .dt-button:hover {
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    color: var(--primary) !important;
+}
+
+/* Active column item (currently visible in the table) */
+div.dt-button-collection .dt-button.dt-button-active {
+    background-color: rgba(51, 154, 240, 0.12) !important;
+    color: var(--text-bright) !important;
+}
+
+div.dt-button-collection .dt-button.dt-button-active:after {
+    content: "✓" !important;
+    color: var(--primary) !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    position: static !important;
+    margin-left: 10px !important;
+    display: inline-block !important;
 }
 
 /* Pagination container */
