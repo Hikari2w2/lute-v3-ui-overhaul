@@ -269,7 +269,9 @@ div.dt-buttons>.dt-button {
 }
 
 
-.flash-notice {
+.flash-notice,
+.flash,
+#flash {
     margin: 1rem;
     margin-bottom: 2rem;
     padding: 0.5rem;

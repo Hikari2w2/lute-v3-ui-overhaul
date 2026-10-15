@@ -488,7 +488,9 @@ div#read_pane_left div#thetext {
     color: var(--primary) !important;
 }
 
-#wordframe {
+#wordframe,
+#wordframeid,
+.wordframecontainer {
     background-color: var(--surface) !important;
     border: none !important;
     border-left: 1px solid var(--border) !important;
@@ -1854,13 +1856,15 @@ div.dataTables_filter input:focus {
    Convert yellow Bootstrap alerts into modern Mantine dark cards
    ================================================================ */
 
-.flash-notice {
+.flash-notice,
+.flash,
+#flash {
     background-color: var(--surface) !important;
     border: 1px solid var(--border) !important;
     border-left: 4px solid var(--primary) !important;
     border-radius: 8px !important;
     padding: 14px 18px !important;
-    margin: 16px 0 24px 0 !important;
+    margin: 16px auto 24px auto !important;
     color: var(--text-bright) !important;
     font-size: 14px !important;
     line-height: 1.5 !important;
@@ -1868,26 +1872,53 @@ div.dataTables_filter input:focus {
     box-sizing: border-box !important;
 }
 
-.flash-notice p {
+.flash-notice p,
+.flash p,
+#flash p {
     margin: 4px 0 !important;
     color: var(--text-bright) !important;
+    font-size: 14px !important;
+    font-family: inherit !important;
 }
 
-.flash-notice p:first-child {
+.flash-notice p:first-child,
+.flash p:first-child,
+#flash p:first-child {
     margin-top: 0 !important;
 }
 
-.flash-notice p:last-child {
+.flash-notice p:last-child,
+.flash p:last-child,
+#flash p:last-child {
     margin-bottom: 0 !important;
 }
 
-.flash-notice a {
+.flash-notice a,
+.flash a,
+#flash a {
     color: var(--primary) !important;
     text-decoration: underline !important;
-    font-weight: 600 !important;
 }
 
-.flash-notice a:hover {
+body.flash-body,
+body:has(#flash),
+body:has(.flash) {
+    background-color: var(--bg-color) !important;
+    color: var(--text-bright) !important;
+    padding: 16px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+body.flash-body #flash,
+body.flash-body .flash {
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+.flash-notice a:hover,
+.flash a:hover,
+#flash a:hover {
     color: var(--primary-hover) !important;
 }
 
