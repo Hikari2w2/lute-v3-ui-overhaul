@@ -409,6 +409,46 @@ span.status3 { background-color: rgba(252, 196, 25, 0.15) !important; color: #ff
 span.status4 { background-color: rgba(140, 226, 0, 0.15) !important; color: #fff !important; }
 span.status5 { background-color: rgba(64, 192, 87, 0.15) !important; color: #fff !important; }
 
+/* Text Selection & Multi-Word Selection Overhaul (Dark Mode) */
+::selection {
+    background-color: rgba(51, 154, 240, 0.45) !important;
+    color: #FFFFFF !important;
+}
+::-moz-selection {
+    background-color: rgba(51, 154, 240, 0.45) !important;
+    color: #FFFFFF !important;
+}
+
+/* Multi-word drag selection in reading pane (replaces glaring yellow) */
+.newmultiterm,
+span.newmultiterm,
+span.textitem.newmultiterm,
+span[class*="status"].newmultiterm {
+    background-color: rgba(51, 154, 240, 0.45) !important;
+    color: #FFFFFF !important;
+    border-radius: 2px !important;
+}
+
+/* Flash text copy highlight (replaces glaring yellow) */
+span.flashtextcopy {
+    background-color: rgba(51, 154, 240, 0.5) !important;
+    color: #FFFFFF !important;
+    border-radius: 2px !important;
+}
+
+/* Word hover and keyboard navigation indicators */
+.wordhover,
+span.wordhover {
+    border-bottom: 2px solid var(--primary) !important;
+}
+
+.kwordmarked,
+span.kwordmarked {
+    border-bottom: 2px solid var(--primary) !important;
+    background-color: rgba(51, 154, 240, 0.18) !important;
+    border-radius: 2px !important;
+}
+
 
 /* Container Spacing */
 .container {
