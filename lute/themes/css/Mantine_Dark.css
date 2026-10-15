@@ -735,6 +735,22 @@ input:focus, select:focus, textarea:focus {
 #status {
     gap: 5px !important;
 }
+#status label,
+#status input:checked + label,
+#status input + label,
+#status label:hover,
+#status-0:checked + label,
+#status-1:checked + label,
+#status-2:checked + label,
+#status-3:checked + label,
+#status-4:checked + label,
+#status-5:checked + label,
+#status-6:checked + label {
+    box-shadow: none !important;
+    outline: none !important;
+    padding: 0 !important;
+}
+
 #status label {
     background-color: transparent !important;
     font-weight: 500 !important;
@@ -756,6 +772,7 @@ input:focus, select:focus, textarea:focus {
 #status input:checked + label[for="status-3"] { background-color: rgba(140, 226, 0, 0.15) !important; }
 #status input:checked + label[for="status-4"] { background-color: rgba(64, 192, 87, 0.15) !important; }
 #status input:checked + label[for="status-5"] { background-color: rgba(64, 192, 87, 0.15) !important; }
+#status input:checked + label[for="status-6"] { background-color: rgba(240, 62, 62, 0.15) !important; }
 
 #status label:hover {
     box-shadow: none !important;
