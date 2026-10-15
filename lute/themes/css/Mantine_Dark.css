@@ -55,9 +55,7 @@ div.dataTables_filter {
 }
 
 .dataTables_length select, 
-div.dt-container .dt-length select,
-div.dataTables_filter input,
-div.dt-container .dt-search input {
+div.dt-container .dt-length select {
     background-color: var(--bg-color) !important;
     color: var(--text-bright) !important;
     border: 1px solid var(--border) !important;
@@ -1691,7 +1689,7 @@ div.dt-container .dt-length,
     z-index: 10 !important;
 }
 
-/* Center the top controls row containing search vertically and horizontally with compact spacing */
+/* Center the top controls row containing search vertically and horizontally with exact symmetric spacing */
 div.dt-container div.dt-layout-row:has(.dt-search),
 div.dt-container div.dt-layout-row:first-child,
 div.dataTables_wrapper > div:first-child {
@@ -1699,8 +1697,8 @@ div.dataTables_wrapper > div:first-child {
     justify-content: center !important;
     align-items: center !important;
     width: 100% !important;
-    margin-top: 10px !important;
-    margin-bottom: 12px !important;
+    margin-top: 14px !important;
+    margin-bottom: 9px !important;
     clear: both !important;
 }
 
@@ -1748,16 +1746,20 @@ div.dataTables_filter label {
     letter-spacing: 0.3px !important;
 }
 
+div.dt-container .dt-search input,
+div.dt-container div.dt-search input,
 div.dt-search input,
 div.dataTables_filter input {
     background-color: var(--surface) !important;
     border: 1px solid var(--border) !important;
     color: var(--text-bright) !important;
     border-radius: 20px !important;
-    padding: 6px 16px 6px 36px !important;
+    padding: 7px 28px 7px 36px !important;
     width: 280px !important;
     font-size: 13.5px !important;
+    line-height: 1.4 !important;
     font-family: inherit !important;
+    box-sizing: border-box !important;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C1C2C5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E") !important;
     background-repeat: no-repeat !important;
@@ -1767,6 +1769,8 @@ div.dataTables_filter input {
     outline: none !important;
 }
 
+div.dt-container .dt-search input:focus,
+div.dt-container div.dt-search input:focus,
 div.dt-search input:focus,
 div.dataTables_filter input:focus {
     border-color: var(--primary) !important;
