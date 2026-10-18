@@ -603,17 +603,118 @@ input:focus, select:focus, textarea:focus {
     color: var(--primary) !important;
 }
 
-/* Tagify (Tags input) */
+/* Tagify (Parents & Tags inputs) */
 .tagify {
-    border-color: var(--border) !important;
+    --tags-border-color: var(--border) !important;
+    --tags-hover-border-color: var(--border) !important;
+    --tags-focus-border-color: var(--primary) !important;
+    --tag-bg: #2C2E33 !important;
+    --tag-hover: #373A40 !important;
+    --tag-text-color: var(--text-bright) !important;
+    --tag-text-color--edit: var(--text-bright) !important;
+    --tag-remove-btn-color: var(--text-main) !important;
+    --tag-remove-btn-bg: transparent !important;
+    --tag-remove-btn-bg--hover: var(--status-1-color) !important;
+    --placeholder-color: #909296 !important;
+    --placeholder-color-focus: #5c5f66 !important;
+    --input-color: var(--text-bright) !important;
+    border: 1px solid var(--border) !important;
     background-color: var(--bg-color) !important;
-}
-.tagify__tag {
-    background-color: var(--surface) !important;
+    border-radius: 4px !important;
     color: var(--text-bright) !important;
 }
+
+.tagify--focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 1px var(--primary) !important;
+}
+
+.tagify__tag {
+    background-color: transparent !important;
+    color: var(--text-bright) !important;
+    margin: 2px 4px 2px 0 !important;
+    cursor: pointer !important;
+}
+
+.tagify__tag > div {
+    color: var(--text-bright) !important;
+    padding: 2px 6px !important;
+}
+
+.tagify__tag > div::before {
+    box-shadow: 0 0 0 var(--tag-inset-shadow-size) #2C2E33 inset !important;
+    background-color: #2C2E33 !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 4px !important;
+    transition: all 0.15s ease !important;
+}
+
+.tagify__tag:hover:not([readonly]) div::before,
+.tagify__tag:focus div::before {
+    box-shadow: 0 0 0 var(--tag-inset-shadow-size) #373A40 inset !important;
+    background-color: #373A40 !important;
+    border-color: var(--primary) !important;
+}
+
 .tagify__tag-text {
     color: var(--text-bright) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+
+.tagify__tag__removeBtn {
+    color: var(--text-main) !important;
+    border-radius: 50% !important;
+    margin-left: 4px !important;
+    transition: all 0.2s ease !important;
+}
+
+.tagify__tag__removeBtn:hover {
+    color: #FFFFFF !important;
+    background-color: var(--status-1-color) !important;
+}
+
+.tagify__input {
+    color: var(--text-bright) !important;
+}
+
+.tagify__input:empty::before {
+    color: #909296 !important;
+    opacity: 0.7 !important;
+}
+
+/* Tagify Dropdown (Autocomplete suggestions) */
+.tagify__dropdown {
+    background-color: var(--surface) !important;
+    color: var(--text-bright) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+.tagify__dropdown__wrapper {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 6px !important;
+}
+
+.tagify__dropdown__item {
+    color: var(--text-bright) !important;
+    padding: 6px 10px !important;
+    border-radius: 4px !important;
+}
+
+.tagify__dropdown__item:hover,
+.tagify__dropdown__item--active {
+    background-color: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+.tagify__dropdown__footer {
+    color: var(--text-main) !important;
+    background-color: var(--bg-color) !important;
+    border-top: 1px solid var(--border) !important;
+    padding: 6px 10px !important;
 }
 
 /* Fix reading menu top container white background */
